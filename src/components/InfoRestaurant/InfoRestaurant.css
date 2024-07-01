@@ -1,0 +1,100 @@
+.containerGlobalInfoRestaurant {
+    padding: 20px;
+}
+
+.titleInfoRestaurant {
+    font-size: 3.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: var(--primary-font);
+}
+
+.line {
+    width: 200px;
+    border: 2px solid var(--primary-color);
+    margin: 0 auto;
+}
+
+.textInfoRestaurant {
+    color: #fff;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    margin-bottom: 110px;
+    font-family: var(--secondary-font);
+}
+
+.containerImgInfoRestaurant {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imgInfoRestaurant {
+    height: 425px;
+    width: 335px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+    .titleInfoRestaurant {
+        font-size: 2.8rem;
+    }
+
+    .containerImgInfoRestaurant {
+        gap: 50px;
+    }
+
+    .imgInfoRestaurant {
+        height: 350px;
+        width: 275px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titleInfoRestaurant {
+        font-size: 2.2rem;
+    }
+
+    .textInfoRestaurant {
+        font-size: 0.875rem;
+    }
+
+    .imgInfoRestaurant {
+        height: 300px;
+        width: 235px;
+    }
+}
+
+@media (max-width: 576px) {
+    .titleInfoRestaurant {
+        font-size: 2.2rem;
+    }
+
+    .textInfoRestaurant {
+        font-size: 0.875rem;
+    }
+
+    .imgInfoRestaurant {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleInfoRestaurant {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .textInfoRestaurant {
+        font-size: 0.75rem;
+        margin-bottom: 60px;
+    }
+
+}

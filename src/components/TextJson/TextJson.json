@@ -1,0 +1,39 @@
+{
+  "refRestaurant": "saiko ramen",
+  "restaurantName": "Saiko Ramen",
+  "openingHours": [
+    { "day": 1, "start": 11, "end": 15, "_comment": "Lundi matin" },
+    { "day": 1, "start": 18, "end": 22.5, "_comment": "Lundi soir" },
+
+    { "day": 2, "start": 11, "end": 15, "_comment": "Mardi matin" },
+    { "day": 2, "start": 18, "end": 22.5, "_comment": "Mardi soir" },
+
+    { "day": 3, "start": 11, "end": 15, "_comment": "Mercredi matin" },
+    { "day": 3, "start": 18, "end": 22.5, "_comment": "Mercredi soir" },
+
+    { "day": 4, "start": 11, "end": 15, "_comment": "Jeudi matin" },
+    { "day": 4, "start": 18, "end": 22.5, "_comment": "Jeudi soir" },
+
+    { "day": 5, "start": 11, "end": 15, "_comment": "Vendredi matin" },
+    { "day": 5, "start": 18, "end": 22.5, "_comment": "Vendredi soir" },
+
+    { "day": 6, "start": 11, "end": 15, "_comment": "Samedi matin" },
+    { "day": 6, "start": 18, "end": 22.5, "_comment": "Samedi soir" }
+  ],
+  "nav1": "Accueil",
+  "nav2": "Nos ramens",
+  "nav3": "Menu",
+  "nav4": "Le restaurant",
+  "nav5": "Contact",
+  "titleBestseller": "Ramen c'est quoi ?",
+  "textBestseller": "Mais qu’est-ce qu’un ramen ?\n\n Le ramen est à la base un plat de nouilles, accompagnées par une soupe qui donne le goût à celles-ci.\n\n C’est un élément incontournable de la gastronomie japonaise, qui a la particularité de se renouveler sans cesse depuis quelques décennies.",
+  "btnBestseller": "En savoir plus !",
+  "redirectionBestseller": "https://fr.wikipedia.org/wiki/R%C4%81men",
+  "titleCarousel": "Nos Ramens",
+  "textInfoProducts": "Plongez dans l'univers savoureux de nos ramens, où chaque bol est un délice authentique.\n\n Préparés avec soin et des ingrédients de qualité, nos ramens vous promettent une expérience culinaire exceptionnelle.\n\n Venez déguster nos ramens et laissez-vous séduire par leur goût exceptionnel et leur authenticité.",
+  "textInfoRestaurant": "Bienvenue au Saiko Ramen !\n Plongez dans une ambiance chaleureuse et élégante où chaque détail est pensé pour votre confort.\n Venez vivre une expérience culinaire exceptionnelle à Saint-Ouen-sur-Seine et laissez-vous charmer par notre hospitalité inégalée.",
+  "address": "165 bd Victor Hugo, 93400 Saint-Ouen-sur-Seine",
+  "phone": "01 40 12 12 18",
+  "email": "saikoramen93@gmail.com",
+  "hourly": "Lun - Ven : 11h00 - 15h00 / 18h00 - 22h30\n Dim : Fermé"
+}

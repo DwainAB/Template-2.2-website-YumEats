@@ -1,0 +1,143 @@
+.containerGlobalCarousel {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.titleCarousel {
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    margin-top: 140px;
+    margin-bottom: 90px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-content {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 3); /* Default to 3 items per row */
+    margin: 0 10px;
+}
+
+.carousel img {
+    height: 340px;
+    width: 320px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    left: -80px;
+    color: var(--primary-color);
+}
+
+.right-arrow {
+    position: absolute;
+    right: -80px;
+    color: var(--primary-color);
+}
+
+.textImgCarousel {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-top: 20px;
+    text-transform: uppercase; 
+}
+
+@media (max-width: 1200px) {
+    .carousel-item {
+        flex: 0 0 calc(100% / 2); /* 2 items per row */
+    }
+}
+
+@media (max-width: 930px) {
+ .right-arrow{
+    right: -60px;
+ }
+
+ .left-arrow{
+    left: -60px;
+ }
+}
+
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 100%; /* 1 item per row */
+    }
+
+    .left-arrow,
+    .right-arrow {
+        font-size: 1.5em; /* Smaller arrows for smaller screens */
+    }
+
+    .left-arrow{
+        left: 0px;
+    }
+
+    .right-arrow{
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .left-arrow{
+        left: 120px;
+        bottom: -50px;
+    }
+
+    .right-arrow{
+        right: 120px;
+        bottom: -50px;
+
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .left-arrow{
+        left: 20px;
+    }
+
+    .right-arrow{
+        right: 20px;
+
+    }
+
+    .imgCarousel{
+        width: 250px!important;
+        height: 250px!important;
+    }
+
+    .titleCarousel{
+        margin-top: 50px;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .textImgCarousel{
+        font-size: 1.2rem;
+    }
+}

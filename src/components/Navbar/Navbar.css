@@ -1,0 +1,176 @@
+.containerGlobalNavbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px; /* Assurez-vous que le conteneur ait une hauteur */
+}
+
+.logo{
+    z-index: 5;
+    width: 200px;
+    height: 200px;
+}
+
+.containerTitleNavbar{
+    z-index: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageBanner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute; /* Position absolute to allow text to overlay */
+    top: 0;
+    left: 0;
+}
+
+.containerShadowNavbar{
+    background-color: black;
+    opacity: .5;
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    z-index: 500;
+    top: 0;
+    left: 0;
+}
+
+.titleNavbar {
+    color: #C3AC86;
+    font-size: 6.5rem;
+    z-index: 1; /* Ensure the text is above the image */
+    font-family: var(--primary-font);
+}
+
+.navbar{
+    position: absolute;
+    z-index: 999;
+    background-color: var(--secondary-color);
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;    
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    bottom: -70px;
+}
+
+.navbarItem{
+    color: #fff;
+    border: 2px solid var(--primary-color);
+    height: 45px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all .3s;
+    font-family: var(--secondary-font);
+}
+
+.navbarItem:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+@media screen and (max-width : 1180px ) {
+    .navbar{
+        gap: 4vw;
+    }
+
+    .navbarItem{
+        width: 110px;
+    }
+
+    .titleNavbar{
+        font-size: 4rem;
+    }
+
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .navbar {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(18, 29, 33, 0.9);
+        transform: translateX(100%);
+        z-index: 800;
+    }
+
+    .imageBanner, .containerShadowNavbar{
+        height: 400px;
+    }
+
+
+
+    .containerGlobalNavbar{
+        height: 400px;
+    }
+
+    .navbar.open {
+        transform: translateX(0);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .menu-icon div {
+        width: 100%;
+        height: 4px;
+        background-color: var(--primary-color);
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .menu-icon.open div:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-icon.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open div:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .containerTitleNavbar{
+        flex-direction: column;
+    }
+
+    .titleNavbar{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .titleNavbar{
+        font-size: 3rem;
+    }
+}

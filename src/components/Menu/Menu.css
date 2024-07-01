@@ -1,0 +1,215 @@
+.containerGlobalMenu {
+  color: var(--primary-color);
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.lineMenu{
+  border: 2px solid var(--primary-color);
+  margin-top: 140px;
+}
+
+.titleMenu {
+  font-size: 3.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+.filter select {
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  text-align-last: center; 
+  font-size: 1em;
+  color: #fff;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  font-family: var(--secondary-font);
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  padding: 0;
+}
+
+.filter select:hover {
+  background-color: var(--primary-color);
+}
+
+.filter select:focus{
+  background-color: var(--secondary-color);
+
+}
+
+.filter {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter label {
+  margin-right: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.1em;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 20px;
+  position: relative;
+  font-family: var(--secondary-font);
+}
+
+.item-description {
+  font-size: 0.8em;
+  color: #fff;
+  margin-top: 5px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.item-description::after {
+  content: attr(data-full-description);
+  position: absolute;
+  left: 0;
+  bottom: 125%;
+  width: max-content;
+  max-width: 300px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: normal;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.item-description:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.titlePriceProduct {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.categoryTitle {
+  font-size: 1.55rem;
+  color: #fff;
+  margin-top: 42px;
+  margin-bottom: 52px;
+  text-align: center;
+  font-family: var(--secondary-font);
+}
+
+.addLocalStorage {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--primary-color);
+  color: #fff;
+  height: 40px;
+  margin-top: 20px;
+  transition: all .3s;
+}
+
+.addLocalStorage:hover {
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.pagination button:hover, .pagination button.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .titleMenu {
+    font-size: 2em;
+  }
+
+  .lineMenu{
+    margin-top: 100px;
+  }
+
+  .menu-item {
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1090px) {
+  .titleMenu {
+    font-size: 2.6em;
+  }
+
+  .menu-item {
+    width: 90%;
+    max-width: none;
+  }
+
+  .filter select {
+    width: 50%;
+  }
+
+  .categoryTitle{
+    font-size: 1.5em;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .titleMenu {
+    font-size: 2em;
+  }
+
+  .categoryTitle{
+    font-size: 1.3em;
+  }
+
+}

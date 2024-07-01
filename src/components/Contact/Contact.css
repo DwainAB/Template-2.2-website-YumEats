@@ -1,0 +1,81 @@
+.containerGlobalContact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 500px;
+    margin-top: 140px;
+}
+
+.containerInfoContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 50%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titleContact {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 3.8rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.textContact {
+    font-size: 0.813rem;
+    color: #ADADAD;
+    line-height: 20px;
+    font-family: var(--secondary-font);
+}
+
+.textBoldContact {
+    font-weight: 500;
+    color: #fff !important;
+}
+
+.containerImgContact {
+    width: 50%;
+}
+
+.imgContact {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 855px) {
+    .containerGlobalContact {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .containerInfoContact, .containerImgContact {
+        width: 100%;
+    }
+
+    .titleContact {
+        font-size: 2.8rem;
+    }
+
+    .textContact {
+        font-size: 1rem;
+    }
+
+    .imgContact {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleContact {
+        font-size: 1.8rem;
+    }
+
+    .textContact {
+        font-size: 0.9rem;
+    }
+}

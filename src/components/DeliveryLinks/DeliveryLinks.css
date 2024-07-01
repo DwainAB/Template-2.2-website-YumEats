@@ -1,0 +1,36 @@
+.containerDeliveryLinks{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.containerClickAndCollect, .containerLinks{
+    border: 2px solid var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 200px;
+    transition: all .3s;
+}
+
+.containerClickAndCollect:hover, .containerLinks:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 550px) {
+    .containerDeliveryLinks{
+        flex-direction: column;
+        margin-top: 50px;
+    }
+}
+
+

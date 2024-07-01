@@ -1,0 +1,25 @@
+:root {
+
+    /*Fonts du site internet*/
+
+    --primary-font: "Fahkwang", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+
+    /* Couleurs du site internet*/
+
+    --primary-color: #C3AC86;
+    --primary-color-opacity: rgba(195, 172, 134, 0.2);
+    --secondary-color: #121D21;
+    --third-color: #0D1315;
+  }  
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0D1315;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

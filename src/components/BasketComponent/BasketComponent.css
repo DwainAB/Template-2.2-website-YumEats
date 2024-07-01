@@ -1,0 +1,217 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px var(--third-color) inset; /* Changez la couleur de fond ici */
+    box-shadow: 0 0 0px 1000px var(--third-color) inset; /* Changez la couleur de fond ici */
+    -webkit-text-fill-color: #fff; /* Couleur du texte */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.textRestaurantClose{
+    color: #fff;
+}
+
+
+.containerGlobalBasket {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 140px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.containerItemsBasket, .containerFormBasket {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.containerItemsBasket {
+    border: 2px solid var(--primary-color);
+}
+
+.containerItemsBasket h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px!important;
+}
+
+.textGold {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.basket-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-color-opacity);
+    padding-bottom: 20px;
+}
+
+.basket-item p {
+    color: #fff;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+}
+
+.container-btn-item {
+    display: flex;
+    gap: 20px;
+}
+
+.container-btn-item button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-btn-item button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.total-price {
+    color: #fff;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    text-align: end;
+}
+
+.basket-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-family: var(--secondary-font);
+}
+
+.basket-empty span {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.basket-empty p {
+    margin-bottom: 30px;
+}
+
+.containerFormBasket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.containerFormBasket form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 60%;
+}
+
+.containerFormBasket form input, select {
+    width: 100%;
+    height: 45px;
+    background-color: var(--third-color);
+    border: 2px solid var(--primary-color);
+    color: #fff;
+    box-sizing: border-box;
+    transition: all .3s;
+    padding-left: 20px;
+}
+
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+input[type=submit] {
+    padding: 0!important;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+    .containerGlobalBasket {
+        margin-left: 50px;
+        margin-right: 50px;
+        gap: 30px;
+    }
+    .containerItemsBasket, .containerFormBasket {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .containerGlobalBasket {
+        margin-left: 100px;
+        margin-right: 100px;
+        gap: 50px;
+    }
+    .containerItemsBasket {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .containerItemsBasket h2 {
+        font-size: 3.8rem;
+    }
+    .total-price {
+        font-size: 1.2rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .containerFormBasket{
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 1470px) {
+    .containerGlobalBasket {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .containerItemsBasket{
+        width: 100%;
+    }
+
+    form{
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 550px) {
+    .containerFormBasket{
+        width: 100%;
+    }
+}
