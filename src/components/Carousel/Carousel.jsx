@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import textJson from "../TextJson/TextJson.json";
-import { apiService } from "../API/Api";
+import { supabase } from '../SUPABASE/Supabase';
 
 function Carousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -12,11 +12,13 @@ function Carousel() {
     useEffect(() => {
         const fetchFoodsAndCategories = async () => {
             try {
-                const fetchedFoods = await apiService.getFoods(nameRestaurant);
-                // Filtrer les plats pour ne garder que ceux de la catégorie "Ramen"
-                const ramenFoods = fetchedFoods.filter(food => food.category === "Ramen");
-                setFoods(ramenFoods);
-                console.log("Ramen Foods:", ramenFoods);
+                const { data: fetchedFoods, error: foodError } = await supabase
+                .from('products')
+                .select('*')
+                .eq('category_id', "ed107361-0222-4b83-932b-cd4f50c7d584");
+                
+              if (foodError) throw foodError;
+              setFoods(fetchedFoods);
             } catch (error) {
                 console.error("Erreur lors de la récupération des données :", error);
             }
@@ -73,7 +75,7 @@ function Carousel() {
                 <div className="carousel-content">
                     {displayItems.map((item, index) => (
                         <div key={index} className="carousel-item">
-                            <img className="imgCarousel" src={`https://sasyumeats.com/${item.image}`} alt={item.title} />
+                            <img className="imgCarousel" src={`${item.image_url}`} alt={item.title} />
                             <p className="textImgCarousel">{item.title}</p>
                         </div>
                     ))}

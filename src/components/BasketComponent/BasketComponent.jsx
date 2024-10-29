@@ -8,7 +8,7 @@ import { loadStripe } from "@stripe/stripe-js";
 const STRIPE_PUBLIC_KEY = "pk_test_51PS2vrE8TRppwfoolKn4KJiGRYFUx78J1FBLSelc66CdLHGE08LIgmTY2MSr2SXfNhok5CgOUBWnsfDh4ajCmPPY00qUF0Fpz0";
 
 function BasketComponent() {
-    const [totalPrice, setTotalPrice] = useState(0);
+/*    const [totalPrice, setTotalPrice] = useState(0);
     const [cartItems, setCartItems] = useState([]);
     const [connectedAccountId, setConnectedAccountId] = useState("acct_1PUaTyCh3kVwqB3M");
     const nameRestaurant = textJson.refRestaurant;
@@ -182,7 +182,7 @@ function BasketComponent() {
                 </form>
             </div>
         </div>
-    );
+    );*/
 }
 
 export default BasketComponent;

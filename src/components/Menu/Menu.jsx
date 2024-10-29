@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Menu.css';
-import { apiService } from "../API/Api";
+import { supabase } from '../SUPABASE/Supabase';
 import textJson from "../TextJson/TextJson.json";
 
 function Menu() {
@@ -13,18 +13,31 @@ function Menu() {
   const nameRestaurant = textJson.refRestaurant;
 
   useEffect(() => {
-      const fetchFoodsAndCategories = async () => {
-          try {
-              const fetchedFoods = await apiService.getFoods(nameRestaurant);
-              const fetchedCategories = await apiService.getAllCategories(nameRestaurant);
-              setFoods(fetchedFoods);
-              setCategories(fetchedCategories);
-          } catch (error) {
-              console.error("Erreur lors de la récupération des données :", error);
-          }
-      };
+    const fetchFoodsAndCategories = async () => {
+      try {
+        // Récupère les produits filtrés par restaurant_id
+        const { data: fetchedFoods, error: foodError } = await supabase
+          .from('products')
+          .select('*')
+          .eq('restaurant_id', nameRestaurant);
+          
+        if (foodError) throw foodError;
+        setFoods(fetchedFoods);
 
-      fetchFoodsAndCategories();
+        // Récupère les catégories (ajustez cette requête si nécessaire)
+        const { data: fetchedCategories, error: categoryError } = await supabase
+          .from('categories') // Remplacez 'categories' par le nom exact de votre table
+          .select('name')
+          .eq('restaurant_id', nameRestaurant);
+
+        if (categoryError) throw categoryError;
+        setCategories(fetchedCategories);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des données :", error);
+      }
+    };
+
+    fetchFoodsAndCategories();
   }, [nameRestaurant]);
 
   useEffect(() => {
@@ -97,7 +110,7 @@ function Menu() {
         {currentItems.map((item, index) => (
           <div key={index} className="menu-item">
             <div className='titlePriceProduct'>
-                <div className="item-name">{item.title}</div>
+                <div className="item-name">{item.name}</div>
                 <div className="item-price">{item.price} €</div>
             </div>
             <div className="item-description" data-full-description={item.description}>
